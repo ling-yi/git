@@ -1,5 +1,9 @@
 学习资料链接：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
 
+0 git中快捷键
+	Ctrl+Ins 复制
+	Shift+Ins 粘贴
+	
 1 git查看/修改用户名和邮箱
 	1.1 查看
 		查看用户名：git config user.name
@@ -20,6 +24,9 @@
 	
 3 将修改提交到存储库
 	3.1 git add 某文件。将某文件的修改添加到暂存区
+		git add .。添加新文件和被修改文件，不包括被删除文件
+		git add -u。添加被修改文件和被删除文件，不包括新文件
+		git add -A。添加所有变化，包括被修改文件，被删除文件和新文件
 	3.2 git commit -m "xxx"。将暂存区里的更改提交到存储库,-m后面的是本次提交的说明
 	3.3 git status。显示工作目录和暂存区的状态。使用此命令可以看到哪些修改被暂存可以提交了，哪些没有
 	3.4 git diff。比较的是工作目录(Working tree)和暂存区域快照(index)之间的差异，也就是修改之后还没有暂存起来的变化内容
@@ -68,6 +75,7 @@
 	7.5 Git如果使用SSH连接，在第一次验证GitHub服务器的Key时，需要你确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可。所以，上面的7.3会得到需要你确认指纹信息的警告，输入yes回车即可。
 	7.6 git remote。远程仓库查询
 		git remote -v。远程仓库地址查询
+	7.7 git remote rm <origin>。删除远程库和本地库的一个连接
 	
 8 从远程库克隆。
 	克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆:git clone <git远程库地址>
