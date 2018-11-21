@@ -1,3 +1,5 @@
+学习资料链接：https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
 1 git查看/修改用户名和邮箱
 	1.1 查看
 		查看用户名：git config user.name
