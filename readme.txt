@@ -66,6 +66,8 @@
 		由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令：git push <origin> master
 	7.4 在以后的推送和拉取时，直接用git push <origin> master即可，因为7.3中的-u参数已经把本地的master分支和远程的master分支关联起来
 	7.5 Git如果使用SSH连接，在第一次验证GitHub服务器的Key时，需要你确认GitHub的Key的指纹信息是否真的来自GitHub的服务器，输入yes回车即可。所以，上面的7.3会得到需要你确认指纹信息的警告，输入yes回车即可。
+	7.6 git remote。远程仓库查询
+		git remote -v。远程仓库地址查询
 	
 8 从远程库克隆。
 	克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆:git clone <git远程库地址>
