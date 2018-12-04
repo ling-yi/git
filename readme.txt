@@ -82,3 +82,13 @@
 	Git支持多种协议，所以git远程库的地址不止一个，其中包括https和ssh。所以，有git clone <https>和git clone <SSH>。
 	ssh支持的原生git协议速度最快。
 	使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。
+	
+9 创建和合并分支
+	9.1 HEAD指向当前分支
+	9.2 git branch。查看当前分支
+		git branch <分支名>。创建新分支
+		git checkout <分支名>。切换到分支
+		git checkout -b <分支名>。创建新分支并切换到这个分支
+		git merge <分支名>。将分支合并到当前分支
+		git branch -d <分支名>。删除分支
+	9.3 信息Fast-forward，代表这次合并是“快进模式”，也就是将当前分支直接指向要合并的分支的当前提交。因此，合并速度很快
