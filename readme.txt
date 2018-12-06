@@ -108,3 +108,12 @@
 11 分支管理策略
 	11.1 当合并分支时，如果可能，git会尽量使用fast-forward模式。在这种模式下，删掉分支，会丢失分支信息，即在查看分支历史时也看不到关于这个分支的信息。
 	11.2 合并分支时，加上“--no-ff”参数可以强制禁用fast-forward模式，git就会在merge时生成一个新的commit（这时，可以加上参数“-m”,把commit描述写进去）。这样在分支历史上就可以查看分支信息。
+	
+12 Bug分支
+	12.1 当要修复一个bug，可以通过建立一个bug分支来修复，修复完成后删除；当手头还有工作没有完成时，可以先把工作现场git stash一下，在修复完bug后，再git stash pop,回到工作现场。
+	12.2 关于工作现场的命令
+		git stash。保存工作现场
+		git stash list。查看保存的工作现场
+		git stash pop。恢复工作现场并删除对应的保存的工作现场
+		git stash apply。恢复工作现场
+		git stash drop。删除工作现场，往往和git stash apply共用
