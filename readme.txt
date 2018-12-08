@@ -131,4 +131,18 @@
 
 14 rebase操作
 	14.1 git rebase。将本地未push的分叉提交历史整理成一条直线。目的是让我查看提交历史时更容易，因为分叉的提交需要三方对比。
-	14.2 缺点：经过这个操作的本地分叉提交被修改过。
+	14.2 缺点：
+		只有当本地未push的提交有分叉才能用rebase。用了rebase后要重新合并git pull下来的和本地修改的内容，之后git add,不用commit,直接git rebase --continue。
+		经过这个操作的本地分叉提交被修改过。
+	14.3 git rebase --abort。任何都可以用这个操作使得回到rebase前的状态。
+	
+15 标签管理
+	git tag。查看所有标签
+	git tag <tagname>。打一个标签再最新提交上。
+	git tag <tagname> <commit id>。打一个标签在commit id上
+	git show <tagname>。查看标签详细信息
+	git tag -a <tagname> -m "<标签内容描述>" <connit id>。打一个标签在commit id上并加上标签描述
+	git push origin <tagname>。推送一个标签
+	git push origin --tags。推送所有没有推送的标签
+	git tag -d <tagname>。删除一个标签
+	git push origin :refs/tags/<tagname>。删除一个已经推送的标签（即远程标签）
