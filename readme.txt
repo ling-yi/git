@@ -146,3 +146,5 @@
 	git push origin --tags。推送所有没有推送的标签
 	git tag -d <tagname>。删除一个标签
 	git push origin :refs/tags/<tagname>。删除一个已经推送的标签（即远程标签）
+	
+16 以上是主要内容。剩下的细节包括使用GitHub、使用码云和自定义git。在需要时再查看。
