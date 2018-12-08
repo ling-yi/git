@@ -122,3 +122,13 @@
 		git stash pop。恢复工作现场并删除对应的保存的工作现场
 		git stash apply。恢复工作现场
 		git stash drop。删除工作现场，往往和git stash apply共用
+		
+13 多人协作
+	13.1 git clone远程仓库时，git会自动把本地的master分支和远程的master分支对应起来，并且，远程仓库的默认名称时origin。
+	13.2 git clone下来的仓库，默认只能看到本地的master分支（用git branch查看，不过使用git branch -a可以查看所有分支，包括隐藏的分支），而且只有master分支的推送有效。如果想要clone远程仓库中指定的某一分支，需要使用git checkout -b branch-name origin/branch-name。
+	13.3 建立本地创建的分支和远程的分支的关联，使用git branch --set-upstream-to origin/branch-name。
+	13.4 从本地推送分支后，如果推送失败，可以用git pull抓取远程的分支。抓取的分支会直接和你要推送的分支直接合并。如果里面有冲突，要先处理冲突，然后添加提交再推送。
+
+14 rebase操作
+	14.1 git rebase。将本地未push的分叉提交历史整理成一条直线。目的是让我查看提交历史时更容易，因为分叉的提交需要三方对比。
+	14.2 缺点：经过这个操作的本地分叉提交被修改过。
